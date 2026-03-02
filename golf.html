@@ -60,14 +60,37 @@
 
     <!-- stills grid -->
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <img src="assets/golf/golf_mockup.webp" alt="Golf mockup" class="w-full aspect-video object-cover rounded-sm" />
-      <img src="assets/golf/Screenshot (309).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
-      <img src="assets/golf/Screenshot (314).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
-      <img src="assets/golf/Screenshot (315).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
-      <img src="assets/golf/Screenshot (319).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
-      <img src="assets/golf/golf_plan.png" alt="Golf plan" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/golf_mockup.webp" alt="Golf mockup" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (309).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (314).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (315).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (319).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/golf_plan.png" alt="Golf plan" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
     </div>
   </section>
+
+  <!-- LIGHTBOX -->
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-6" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-sm shadow-2xl" />
+    <button class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl leading-none" onclick="closeLightbox()">×</button>
+  </div>
+
+  <script>
+    function openLightbox(src) {
+      const lb = document.getElementById('lightbox');
+      document.getElementById('lightbox-img').src = src;
+      lb.classList.remove('hidden');
+      lb.classList.add('flex');
+      document.addEventListener('keydown', onKey);
+    }
+    function closeLightbox() {
+      const lb = document.getElementById('lightbox');
+      lb.classList.add('hidden');
+      lb.classList.remove('flex');
+      document.removeEventListener('keydown', onKey);
+    }
+    function onKey(e) { if (e.key === 'Escape') closeLightbox(); }
+  </script>
 
   <!-- FOOTER -->
   <footer class="border-t border-white/10 px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/30 text-xs tracking-widest uppercase max-w-6xl mx-auto">
