@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bobby Weed Golf Design — Jack Rosa, Technical Artist</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body class="bg-black text-white font-sans min-h-screen">
+
+  <!-- NAV -->
+  <nav class="flex items-center justify-between px-8 py-6">
+    <a href="index.html">
+      <img src="assets/logonobackground.png" alt="Jack Rosa" class="h-9 w-auto" />
+    </a>
+    <a href="index.html" class="text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors duration-200">
+      ← Back
+    </a>
+  </nav>
+
+  <!-- HERO VIDEO -->
+  <section class="w-full aspect-video bg-neutral-900">
+    <video
+      class="w-full h-full object-cover"
+      src="assets/golf/flyover_1.mp4"
+      controls
+      autoplay
+      muted
+      loop
+      playsinline
+    ></video>
+  </section>
+
+  <!-- PROJECT INFO -->
+  <section class="max-w-4xl mx-auto px-6 py-16">
+    <div class="flex flex-col gap-4 mb-14">
+      <div>
+        <p class="text-xs tracking-[0.4em] uppercase text-white/30 mb-3">Contract Work</p>
+        <h1 class="text-4xl md:text-5xl font-light tracking-wide">Bobby Weed Golf Design</h1>
+        <p class="text-white/40 mt-2 tracking-wide text-sm">Unreal Engine · Real-Time Archviz</p>
+      </div>
+      <p class="text-base text-white/60 font-light leading-relaxed max-w-2xl">
+        Real-time environment visualizations built in Unreal Engine for Bobby Weed Golf Design — one of the world's most respected golf course architects. These renders were produced to communicate design intent across proposed course layouts, replacing traditional static renders with fully navigable, real-time flyovers.
+      </p>
+    </div>
+
+    <!-- stills grid -->
+    <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
+      <img src="assets/golf/golf_mockup.webp" alt="Golf mockup" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/Screenshot (309).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/Screenshot (314).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/Screenshot (315).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/Screenshot (319).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm" />
+      <img src="assets/golf/golf_plan.png" alt="Golf plan" class="w-full aspect-video object-cover rounded-sm" />
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-white/10 px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/30 text-xs tracking-widest uppercase max-w-6xl mx-auto">
+    <span>© 2026 Jack Rosa</span>
+    <a href="errand.html" class="hover:text-white transition-colors">Next: The Errand →</a>
+  </footer>
+
+</body>
+</html>
