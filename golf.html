@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -20,6 +21,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
 </head>
+
 <body class="bg-black text-white font-sans min-h-screen">
 
   <!-- NAV -->
@@ -27,22 +29,16 @@
     <a href="index.html">
       <img src="assets/logonobackground.png" alt="Jack Rosa" class="h-9 w-auto" />
     </a>
-    <a href="index.html" class="text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors duration-200">
+    <a href="index.html"
+      class="text-xs tracking-widest uppercase text-white/40 hover:text-white transition-colors duration-200">
       ← Back
     </a>
   </nav>
 
   <!-- HERO VIDEO -->
   <section class="w-full aspect-video bg-neutral-900">
-    <video
-      class="w-full h-full object-cover"
-      src="assets/golf/flyover_1.mp4"
-      controls
-      autoplay
-      muted
-      loop
-      playsinline
-    ></video>
+    <video class="w-full h-full object-cover" src="assets/golf/flyover_1.mp4" controls autoplay muted loop
+      playsinline></video>
   </section>
 
   <!-- PROJECT INFO -->
@@ -53,26 +49,52 @@
         <h1 class="text-4xl md:text-5xl font-light tracking-wide">Bobby Weed Golf Design</h1>
         <p class="text-white/40 mt-2 tracking-wide text-sm">Unreal Engine · Real-Time Archviz</p>
       </div>
-      <p class="text-base text-white/60 font-light leading-relaxed max-w-2xl">
-        Real-time environment visualizations built in Unreal Engine for Bobby Weed Golf Design — one of the world's most respected golf course architects. These renders were produced to communicate design intent across proposed course layouts, replacing traditional static renders with fully navigable, real-time flyovers.
-      </p>
+      <div class="text-base text-white/60 font-light leading-relaxed max-w-2xl flex flex-col gap-2">
+        <p>
+          Real-time environment visualizations built in Unreal Engine for Bobby Weed Golf Design, one of the world's
+          most respected golf course architects. These levels were produced to communicate design intent across proposed
+          course layouts, replacing traditional static renders with fully navigable, real-time flyovers.
+        </p>
+        <p>
+          These Unreal Engine projects were instrumental in demonstrating the spatial relationships between key course
+          features, such as fairways, greens, and hazards to the course stakeholders. The courses visualized in these
+          projects include Grandfather Country Club in North Carolina and Palma Ceia Golf & Country Club in Florida.
+        </p>
+      </div>
     </div>
 
     <!-- stills grid -->
     <div class="grid grid-cols-2 md:grid-cols-3 gap-3">
-      <img src="assets/golf/golf_mockup.webp" alt="Golf mockup" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-      <img src="assets/golf/Screenshot (309).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-      <img src="assets/golf/Screenshot (314).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-      <img src="assets/golf/Screenshot (315).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-      <img src="assets/golf/Screenshot (319).png" alt="Golf still" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
-      <img src="assets/golf/golf_plan.png" alt="Golf plan" class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity" onclick="openLightbox(this.src)" />
+      <img src="assets/golf/grandfather_mountain.png" alt="Grandfather Country Club"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/golf_mockup.webp" alt="Golf mockup"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (309).png" alt="Golf still"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (314).png" alt="Golf still"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (315).png" alt="Golf still"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/Screenshot (319).png" alt="Golf still"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
+      <img src="assets/golf/golf_plan.png" alt="Golf plan"
+        class="w-full aspect-video object-cover rounded-sm cursor-zoom-in hover:opacity-90 transition-opacity"
+        onclick="openLightbox(this.src)" />
     </div>
   </section>
 
   <!-- LIGHTBOX -->
-  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-6" onclick="closeLightbox()">
+  <div id="lightbox" class="fixed inset-0 bg-black/90 z-50 hidden items-center justify-center p-6"
+    onclick="closeLightbox()">
     <img id="lightbox-img" src="" alt="" class="max-w-full max-h-full object-contain rounded-sm shadow-2xl" />
-    <button class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl leading-none" onclick="closeLightbox()">×</button>
+    <button class="absolute top-6 right-8 text-white/50 hover:text-white text-3xl leading-none"
+      onclick="closeLightbox()">×</button>
   </div>
 
   <script>
@@ -93,10 +115,12 @@
   </script>
 
   <!-- FOOTER -->
-  <footer class="border-t border-white/10 px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/30 text-xs tracking-widest uppercase max-w-6xl mx-auto">
+  <footer
+    class="border-t border-white/10 px-6 py-10 flex flex-col md:flex-row items-center justify-between gap-4 text-white/30 text-xs tracking-widest uppercase max-w-6xl mx-auto">
     <span>© 2026 Jack Rosa</span>
     <a href="errand.html" class="hover:text-white transition-colors">Next: The Errand →</a>
   </footer>
 
 </body>
+
 </html>
